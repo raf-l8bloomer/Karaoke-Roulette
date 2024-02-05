@@ -1,18 +1,27 @@
 const data = [
-    "4 Chair Turn",
+    "You want a '4 Chair Turn' on The Voice",
     "Opening a Sonny Angel you already have",
     "Rolling a 7 in Catan",
     "Audition for your vape back",
     "This would kill a victorian child",
-    "You have to poo but there's 12 other people in the adjacent room",
+    "You have to poop but there's 12 other people in the next room",
     "You've been chosen as tribute for The Hunger Games",
     "Revenge Era",
     "The last cigarette in the box",
     "Stuck in an elevator with your crush",
     "You've just discovered electricity",
-    "Finding the perfect meme for the groupchat before the someone else replies",
+    "Finding the perfect meme for the groupchat before someone else replies",
     "Voicemail song",
-    "Empty parking lot acoustics"
+    "Empty parking lot acoustics",
+    "You're looking out the window and it's pouring rain",
+    "Just sent a risky text",
+    "Heartbreak feels good in a place like this",
+    "Love at first sight",
+    "We saw you from across the bar and we really like your vibe",
+    "Where were you on January 6th?",
+    "Trina! A One Woman Show, ft. Chicago",
+    "The edible is hitting",
+    "I work like a dog DAY AND NIGHT"
 ]
 
 const skippedPrompts = [];
@@ -20,6 +29,7 @@ const completedPrompts = [];
 let randomPromptIndex = 0
 
 function randomPrompt(arr){
+    console.log(arr)
     randomPromptIndex = Math.floor(Math.random() * arr.length);
     return arr[randomPromptIndex]
 }
@@ -53,16 +63,11 @@ complete.addEventListener('click', () => {
     console.log(`What's left of data prompts ${data} `)
 })
 
-/*
-Click spin
-get random prompt
-Sing to current prompted song
-Click complete
-Remove current prompted song from array
-add current prompted song to completed array
-*/
-
-
-
+var popupWindow = window.open(
+    chrome.extension.getURL("normal_popup.html"),
+    "karaokeRoulette",
+    "width=500,height=800"
+);
+window.close(); // close the Chrome extension pop-up
 
 
