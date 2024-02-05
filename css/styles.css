@@ -36,6 +36,11 @@ button {
   font-size: 1.5rem;
   width: 100%;
   background-color: #F10ADF;
+  color: #fff;
+}
+
+button:hover {
+  filter: brightness(70%);
 }
 
 header {

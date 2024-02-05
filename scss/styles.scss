@@ -52,6 +52,11 @@ button {
     font-size: 1.5rem;
     width: 100%;
     background-color: $pink;
+    color: $white;
+}
+
+button:hover {
+    filter:brightness(70%);
 }
 
 header {
@@ -116,7 +121,6 @@ span {
 .button {
     padding: 10px 30px;
 }
-
 
 
 
