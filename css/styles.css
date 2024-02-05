@@ -1,3 +1,5 @@
+/*COLORS */
+/*FONTS */
 @font-face {
   font-family: "Dance-Floor";
   src: url("../fonts/dance-floor.woff2") format("woff2"), url("../fonts/dance-floor.ttf") format("truetype");
@@ -6,10 +8,9 @@
   font-family: "Upheaval-Pro";
   src: url("../fonts/UpheavalPro.woff2") format("woff2"), url("../fonts/UpheavalPro.ttf") format("truetype");
 }
-/*COLORS */
-/*FONTS */
 * {
-  box-sizing: border-box;
+  box-sizing: border-x;
+  max-height: 1000px;
 }
 
 h1 {
@@ -23,7 +24,9 @@ h2 {
   color: #fff;
 }
 
-h2, p, button {
+h2,
+p,
+button {
   font-family: "Upheaval-Pro", Arial, sans-serif;
 }
 
@@ -57,11 +60,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 600px;
+  width: 500px;
   background-color: #000000;
 }
 
-.title, .description {
+.title,
+.description {
   margin-bottom: auto;
 }
 
@@ -71,7 +76,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1.4rem;
-  min-height: 50%;
+  min-height: 80%;
 }
 
 .interaction {
@@ -113,7 +118,7 @@ span {
   background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
   background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
   padding: 10px;
-  animation: dash 5s linear infinite;
+  animation: dash 10s linear infinite;
 }
 
 @keyframes dash {

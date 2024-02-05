@@ -1,0 +1,27 @@
+/*COLORS */
+
+$green: #00F000;
+$blue: #1C26F8;
+$pink: #F10ADF;
+$orange: #E99D66;
+$black: #000000;
+$white: #fff;
+
+/*FONTS */
+
+
+@font-face {
+    font-family: 'Dance-Floor';
+    src: url('../fonts/dance-floor.woff2') format('woff2'),
+        url('../fonts/dance-floor.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Upheaval-Pro';
+    src: url('../fonts/UpheavalPro.woff2') format('woff2'),
+        url('../fonts/UpheavalPro.ttf') format('truetype');
+}
+
+
+$h1-font-stack: 'Dance-Floor', Arial, sans-serif;
+$font-stack: 'Upheaval-Pro', Arial, sans-serif;

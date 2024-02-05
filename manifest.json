@@ -1,0 +1,6 @@
+{
+    "manifest_version": 3,
+    "name": "Karaoke Roulette",
+    "version": "1.0.0",
+    "description": "Spin the roulette and select a song that pairs well with the prompt."
+  }
