@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Dance-Floor';
+    src: url('../fonts/dance-floor.woff2') format('woff2'),
+        url('../fonts/dance-floor.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Upheaval-Pro';
+    src: url('../fonts/UpheavalPro.woff2') format('woff2'),
+        url('../fonts/UpheavalPro.ttf') format('truetype');
+}
+
+/*COLORS */
+
+$green: #00F000;
+$blue: #1C26F8;
+$pink: #F10ADF;
+$orange: #E99D66;
+$black: #000000;
+$white: #fff;
+
+/*FONTS */
+$h1-font-stack: 'Dance-Floor', Arial, sans-serif;
+$font-stack: 'Upheaval-Pro', Arial, sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: $h1-font-stack;
+    font-size: 1.8rem;
+    color: $green;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: $white;
+}
+
+
+h2, p, button {
+    font-family: $font-stack;
+}
+
+p {
+    font-size: 2rem;
+    color: $white;
+}
+
+button {
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: $pink;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    background-color: $black;
+}
+
+
+.border {
+    border: 5px dashed $blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem;
+    margin: 0 2rem;
+    min-height: 90%;
+    min-width: 80%;
+
+}
+
+.interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    background-color: $orange;
+    padding: 0 50px;
+    margin: 10px;
+    border-top: 20px $pink solid;
+    border-bottom: 20px $pink solid;
+
+}
+
+.prompt {
+    text-align: center;
+    margin: 10px 0
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+} 
+
+.button {
+    padding: 10px 30px;
+}
+
+
+
+
+

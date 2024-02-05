@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Dance-Floor";
+  src: url("../fonts/dance-floor.woff2") format("woff2"), url("../fonts/dance-floor.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Upheaval-Pro";
+  src: url("../fonts/UpheavalPro.woff2") format("woff2"), url("../fonts/UpheavalPro.ttf") format("truetype");
+}
+/*COLORS */
+/*FONTS */
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Dance-Floor", Arial, sans-serif;
+  font-size: 1.8rem;
+  color: #00F000;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+h2, p, button {
+  font-family: "Upheaval-Pro", Arial, sans-serif;
+}
+
+p {
+  font-size: 2rem;
+  color: #fff;
+}
+
+button {
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: #F10ADF;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.border {
+  border: 5px dashed #1C26F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  margin: 0 2rem;
+  min-height: 90%;
+  min-width: 80%;
+}
+
+.interaction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  background-color: #E99D66;
+  padding: 0 50px;
+  margin: 10px;
+  border-top: 20px #F10ADF solid;
+  border-bottom: 20px #F10ADF solid;
+}
+
+.prompt {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */

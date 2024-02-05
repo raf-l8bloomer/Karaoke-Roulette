@@ -3,7 +3,16 @@ const data = [
     "Opening a Sonny Angel you already have",
     "Rolling a 7 in Catan",
     "Audition for your vape back",
-    "This would kill a victorian child"
+    "This would kill a victorian child",
+    "You have to poo but there's 12 other people in the adjacent room",
+    "You've been chosen as tribute for The Hunger Games",
+    "Revenge Era",
+    "The last cigarette in the box",
+    "Stuck in an elevator with your crush",
+    "You've just discovered electricity",
+    "Finding the perfect meme for the groupchat before the someone else replies",
+    "Voicemail song",
+    "Empty parking lot acoustics"
 ]
 
 const skippedPrompts = [];
