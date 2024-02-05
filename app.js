@@ -63,11 +63,18 @@ complete.addEventListener('click', () => {
     console.log(`What's left of data prompts ${data} `)
 })
 
-var popupWindow = window.open(
-    chrome.extension.getURL("normal_popup.html"),
-    "karaokeRoulette",
-    "width=500,height=800"
-);
-window.close(); // close the Chrome extension pop-up
 
-
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.contextMenus.create({
+      id: 'openSidePanel',
+      title: 'Open side panel',
+      contexts: ['all']
+    });
+  });
+  
+  chrome.contextMenus.onClicked.addListener((info, tab) => {
+    if (info.menuItemId === 'openSidePanel') {
+      // This will open the panel in all the pages on the current window.
+      chrome.sidePanel.open({ windowId: tab.windowId });
+    }
+  });

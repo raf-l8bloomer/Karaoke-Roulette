@@ -4,20 +4,23 @@
 
 .title,
 .description {
+    margin-top: auto;
     margin-bottom: auto;
 }
 
-.description {
-    margin-top: 0;
-}
+// .description {
+//     margin-top: 0;
+// }
 
 .border {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 1.4rem;
-    min-height: 80%;
+    padding: 0;
+    margin: 25px;
+    height: 100%;
+
 
 }
 
@@ -45,7 +48,7 @@ span {
 }
 
 .options {
-    margin-top: auto;
+    // margin-top: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -56,7 +59,6 @@ span {
     padding: 10px 30px;
     font-family: $upheaval-font;
 }
-
 
 
 .border {
