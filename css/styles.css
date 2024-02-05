@@ -14,12 +14,12 @@
 
 h1 {
   font-family: "Dance-Floor", Arial, sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #00F000;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 
@@ -49,6 +49,8 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: auto;
+  gap: 2em;
 }
 
 body {
@@ -59,16 +61,17 @@ body {
   background-color: #000000;
 }
 
+.title, .description {
+  margin-bottom: auto;
+}
+
 .border {
-  border: 5px dashed #1C26F8;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1.4rem;
-  margin: 0 2rem;
-  min-height: 90%;
-  min-width: 80%;
+  min-height: 50%;
 }
 
 .interaction {
@@ -76,12 +79,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid #fff;
+  width: 100%;
 }
 
 span {
   background-color: #E99D66;
-  padding: 0 50px;
-  margin: 10px;
+  width: 100%;
   border-top: 20px #F10ADF solid;
   border-bottom: 20px #F10ADF solid;
 }
@@ -92,6 +96,7 @@ span {
 }
 
 .options {
+  margin-top: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -100,6 +105,21 @@ span {
 
 .button {
   padding: 10px 30px;
+}
+
+.border {
+  background: linear-gradient(90deg, #1C26F8 50%, transparent 50%), linear-gradient(90deg, #1C26F8 50%, transparent 50%), linear-gradient(0deg, #1C26F8 50%, transparent 50%), linear-gradient(0deg, #1C26F8 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
+  background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+  padding: 10px;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

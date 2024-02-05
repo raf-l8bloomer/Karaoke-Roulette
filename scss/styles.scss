@@ -29,12 +29,12 @@ $font-stack: 'Upheaval-Pro', Arial, sans-serif;
 
 h1 {
     font-family: $h1-font-stack;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: $green;
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: $white;
 }
 
@@ -65,6 +65,8 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: auto;
+    gap: 2em;
 }
 
 body {
@@ -76,17 +78,19 @@ body {
     background-color: $black;
 }
 
+.title, .description {
+    margin-bottom: auto;
+}
+
 
 .border {
-    border: 5px dashed $blue;
+    // border: 5px dashed $blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1.4rem;
-    margin: 0 2rem;
-    min-height: 90%;
-    min-width: 80%;
+    min-height: 50%;
 
 }
 
@@ -95,15 +99,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid $white;
+    width: 100%;
 }
 
 span {
     background-color: $orange;
-    padding: 0 50px;
-    margin: 10px;
+    width: 100%;
+    // margin: 10px;
     border-top: 20px $pink solid;
     border-bottom: 20px $pink solid;
-
 }
 
 .prompt {
@@ -112,6 +117,7 @@ span {
 }
 
 .options {
+    margin-top: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -124,4 +130,21 @@ span {
 
 
 
+.border {
 
+    background: linear-gradient(90deg, $blue 50%, transparent 50%), 
+                linear-gradient(90deg, $blue 50%, transparent 50%), 
+                linear-gradient(0deg, $blue 50%, transparent 50%), 
+                linear-gradient(0deg, $blue 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
+    background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+    padding: 10px;
+    animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;
+    }
+}
