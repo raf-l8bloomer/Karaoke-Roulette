@@ -5,7 +5,7 @@
 
 h1 {
     font-family: $h1-font-stack;
-    font-size: 1.7rem;
+    font-size: 3rem;
     color: $green;
 }
 
@@ -18,18 +18,18 @@ h2 {
 h2,
 p,
 button {
-    font-family: $upheaval-font;
+    font-family: $font-stack;
 }
 
 p {
     // font-family: $font-stack;
     font-size: 1.9rem;
-    letter-spacing: 0.1rem;
-    color: $white;
+    letter-spacing: 0rem;
+    color: $black;
 }
 
 button {
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 100%;
     background-color: $pink;
     color: $white;
@@ -45,15 +45,15 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    // margin-bottom: auto;
     gap: 2em;
+
 }
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 900px;
-    width: 320px;
+    height: 860px;
+    width: 345px;
     background-color: $black;
 }

@@ -2,16 +2,6 @@
 'base';
 
 
-.title,
-.description {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-// .description {
-//     margin-top: 0;
-// }
-
 .border {
     display: flex;
     flex-direction: column;
@@ -20,8 +10,7 @@
     padding: 0;
     margin: 25px;
     height: 100%;
-
-
+    width: 100%;
 }
 
 .interaction {
@@ -34,11 +23,11 @@
 }
 
 span {
-    background-color: $orange;
+    background-color: $orange-fill;
     width: 100%;
     // margin: 10px;
-    border-top: 20px $pink solid;
-    border-bottom: 20px $pink solid;
+    border-top: 20px $orange-stroke solid;
+    border-bottom: 20px $orange-stroke  solid;
 }
 
 .prompt {
@@ -50,14 +39,25 @@ span {
 .options {
     // margin-top: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+#spin {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;;
+}
+
+#complete {
+    background-color: $orange-stroke;
 }
 
 .button {
     padding: 10px 30px;
-    font-family: $upheaval-font;
+    font-family: $font-stack;
 }
 
 
