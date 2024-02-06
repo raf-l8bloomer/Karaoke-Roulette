@@ -24,12 +24,15 @@ const data = [
     "I work like a dog DAY AND NIGHT"
 ]
 
+const spin = document.querySelector('#spin');
+let prompt = document.querySelector('.prompt');
+const complete = document.querySelector('#complete');
 const skippedPrompts = [];
 const completedPrompts = [];
-let randomPromptIndex = 0
+let randomPromptIndex = 0;
+let currentPrompt;
 
 function randomPrompt(arr){
-    console.log(arr)
     randomPromptIndex = Math.floor(Math.random() * arr.length);
     return arr[randomPromptIndex]
 }
@@ -38,31 +41,30 @@ function sangPrompt(arr, index){
     completedPrompts.push(arr[index]);
 }
 
-
-const spin = document.querySelector('#spin');
-let prompt = document.querySelector('.prompt');
-let currentPrompt;
-
-
-spin.addEventListener('click', () => {
+function clearPrompt(){
     currentPrompt = "";
     prompt.innerHTML = "";
+}
+
+function generatePrompt(){
     currentPrompt += randomPrompt(data);
     prompt.innerHTML += currentPrompt;
+
+}
+
+spin.addEventListener('click', () => {
+clearPrompt();
+generatePrompt();
 })
-
-const complete = document.querySelector('#complete');
-
-
 
 complete.addEventListener('click', () => {
     sangPrompt(data, randomPromptIndex);
-    data.splice(randomPromptIndex,1)
-
+    data.splice(randomPromptIndex,1);
+    clearPrompt();
+    generatePrompt();
     console.log(`These are completed prompts: ${completedPrompts} `);
     console.log(`What's left of data prompts ${data} `)
 })
-
 
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
@@ -72,9 +74,9 @@ chrome.runtime.onInstalled.addListener(() => {
     });
   });
   
-  chrome.contextMenus.onClicked.addListener((info, tab) => {
-    if (info.menuItemId === 'openSidePanel') {
-      // This will open the panel in all the pages on the current window.
-      chrome.sidePanel.open({ windowId: tab.windowId });
-    }
-  });
+  // chrome.contextMenus.onClicked.addListener((info, tab) => {
+  //   if (info.menuItemId === 'openSidePanel') {
+  //     // This will open the panel in all the pages on the current window.
+  //     chrome.sidePanel.open({ windowId: tab.windowId });
+  //   }
+  // });
